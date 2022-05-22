@@ -6,8 +6,10 @@
 package cuentas;
 
 /**
- *
- * @author Solid
+ * Contiene los métodos de una cuenta
+ * @author Solid (Juan Carlos Yanes)
+ * @version 1.0
+ * @since 22/05/2022
  */
 public class CCuenta {
 
@@ -21,6 +23,13 @@ public class CCuenta {
     {
     }
 
+    /**
+     * Contiene información de la cuenta
+     * @param nom Nombre titular cuenta
+     * @param cue Cuenta bancaria
+     * @param sal Saldo de la cuenta 
+     * @param tipo Tipo interes de la cuenta
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -28,11 +37,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * 
+     * @return Retorna el saldo de la cuenta
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * 
+     * @param cantidad Cantidad a ingresar
+     * @throws Exception Exepción al introducir cantidad incorrecta
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -42,8 +60,8 @@ public class CCuenta {
 
     /**
      * 
-     * @param cantidad
-     * @throws Exception 
+     * @param cantidad Cantidad a retirar
+     * @throws Exception Exepción al introducir cantidad incorrecta
      */
     public void retirar(double cantidad) throws Exception
     {
@@ -55,56 +73,64 @@ public class CCuenta {
     }
 
     /**
-     * @return the nombre
+     * Devuelve el nombre de la cuenta
+     * @return el nombre de la cuenta
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * Modifica el nombre de la cuenta
+     * @param nombre contiene el nombre de la cuenta 
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the cuenta
+     * Devuelve la cuenta
+     * @return la cuenta
      */
     public String getCuenta() {
         return cuenta;
     }
 
     /**
-     * @param cuenta the cuenta to set
+     * Modifica la cuenta
+     * @param cuenta contiene la cuenta
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * @return the saldo
+     * Devuelve el saldo de la cuenta
+     * @return el saldo de la cuenta
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
-     * @param saldo the saldo to set
+     * Modifica el saldo de la cuenta
+     * @param saldo contiene el saldo de la cuenta
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
-     * @return the tipoInteres
+     * Devuelve el tipoInteres de la cuenta
+     * @return el tipoInteres de la cuenta
      */
     public double getTipoInteres() {
         return tipoInteres;
     }
 
     /**
-     * @param tipoInteres the tipoInteres to set
+     * Modifica el tipoInteres de la cuenta
+     * @param tipoInteres contiene el tipoInteres de la cuenta
      */
     public void setTipoInteres(double tipoInteres) {
         this.tipoInteres = tipoInteres;
